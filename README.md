@@ -159,10 +159,10 @@ Event-Driven - 1000+ emails/day
 **2. What happens if the LLM hallucinates data?**
 
 Multi-Layer Defense Strategy
-Layer 1: Ensemble methods (multiple models)
-Layer 2: Human-in-the-Loop Verification
-Layer 3: Structured Output Validation
-Layer 4: Confidence Scoring
+-Layer 1: Ensemble methods (multiple models)
+-Layer 2: Human-in-the-Loop Verification
+-Layer 3: Structured Output Validation
+-Layer 4: Confidence Scoring
 
 
 

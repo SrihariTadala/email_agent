@@ -1,4 +1,4 @@
-# Freight Quote Agent - Complete Documentation 📚
+# Freight Quote Agent - Complete Documentation 
 **Built with:** Python, FastAPI, Gmail API, Groq (Llama 3.1), Mapbox, ReportLab
 
 
@@ -345,7 +345,7 @@ Test Case C1 — Oversized machinery
   "value_usd": 90000
 }
 
-⭐ 4. Hazmat Scenarios
+ 4. Hazmat Scenarios
 
 {
   "origin_zip": "90021",

@@ -165,8 +165,6 @@ Layer 3: Structured Output Validation
 Layer 4: Confidence Scoring
 
 
-<span style="font-size:26px; font-weight:600;">
-
 
 **3. How do you handle rate limits (Gmail API, LLM API)?**
 
@@ -184,25 +182,21 @@ Monitoring & alerts
 1. Make up zip codes that don't exist , and invent chatbot
 
 
-If customer hasn’t booked in 7,14 days: reaminder mails . Autoreply is the most aspect i believe
-system sends personalized offer.
+If customer hasn’t booked in 7,14 days: reaminder mails . Autoreply is the most aspect i believe system sends personalized offer.
 
 2. Fine-tuning with human corrections
-Every time dispatcher corrects an extraction = training example
-After 200 corrections (1 month at 50 reviews/day) → fine-tune model
+Every time dispatcher corrects an extraction = training example After 200 corrections (1 month at 50 reviews/day) → fine-tune model
 
 
 3. Focus on High-Value Routes First (Risk-Based Prioritization)
 
-Add 5 real freight request examples to every prompt
-Include common scenarios: pallets, LTL, hazmat, cross-country routes
+Add 5 real freight request examples to every prompt Include common scenarios: pallets, LTL, hazmat, cross-country routes
 Show correct city/state/zip combinations
 
 
 Losing a $10K quote due to error is worse than a $500 one
 
-Route patterns matter: Identify your top 20 routes (LA-Chicago, NY-Miami, etc.)
-Create specialized prompts for high-volume lanes
+Route patterns matter: Identify your top 20 routes (LA-Chicago, NY-Miami, etc.) Create specialized prompts for high-volume lanes
 Build custom validation for major customer zip codes
 
 
@@ -216,16 +210,11 @@ Sales provides industry-specific terminology ("reefer" = refrigerated, "LTL" = l
 
 7.  Dynamic Pricing Engine
 Calculate the optimal quote price using:
-market demand
-lane seasonality
-fuel prices
-supply/demand imbalance
-This increases margin by 8–18%
-add cheapest gas stations to the driver along the route so that the cost is opttimized.
+market demand, lane seasonality, fuel prices, supply/demand imbalance
+This increases margin by 8–18% add cheapest gas stations to the driver along the route so that the cost is opttimized.
 
 8. Smart Margin Adjustment
-Automatically apply: minimum margin thresholds discount for exisiting custoemrs higher margins for “urgent”
-lower margins when capacity is high premium pricing for high-risk freight
+Automatically apply: minimum margin thresholds discount for exisiting custoemrs higher margins for “urgent” lower margins when capacity is high premium pricing for high-risk freight
 
 High-Value Customer Dashboard
 top customers

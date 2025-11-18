@@ -244,25 +244,24 @@ Multi-Layer Defense Strategy:
     - Delay patterns  
     - Reward high performers  
 
-****
-** 5. How would you add human review for high-value quotes?**
+**5. How would you add human review for high-value quotes?**
 
+**Human Review System**
 
-Human Review System:
-Priority-based review queue (urgent/high/normal) if amt is greater , slack 
-FastAPI review dashboard with React frontend
-Slack notifications for new reviews
-One-click approve/edit/reject
-Training dataset from corrections
+- Priority-based review queue (urgent / high / normal)  
+- If amount is greater than a threshold → send to human review + Slack notification  
+- FastAPI review dashboard with React frontend  
+- One-click **approve / edit / reject**  
+- Corrections are stored as training data for the model
 
-Prometheus metrics
-Grafana dashboards
-Alert rules (failure rate, queue backlog, slow processing)
-Health check endpoints
-Slack daily summaries
+**Observability**
 
+- Prometheus metrics  
+- Grafana dashboards  
+- Alert rules (failure rate, queue backlog, slow processing)  
+- Health-check endpoints  
+- Slack daily summaries
 
-****
 
 
 Test Cases- 

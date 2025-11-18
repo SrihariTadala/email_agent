@@ -270,7 +270,13 @@ Multi-Layer Defense Strategy:
 - Health-check endpoints  
 - Slack daily summaries
 
-
+**Future Improvements**
+ - Voice-to-Quote System (Audio-Based Freight Requests)
+ - Real-Time Quote Validation Using Live Carrier APIs (AOIS intergration)
+ - Multi-Document Ingestion
+ - Competitor Price Matching (ML-Based Price Benchmarking
+ - Predictive Pickup Window Optimization (Weather, traffic, warehouse hours)
+ - quote simulator(AI simulator to play aroud)
 
 Test Cases- 
 

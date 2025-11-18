@@ -81,6 +81,8 @@ Overview of entire system
 
 Queue-Based - 100-300 emails/day
 
+```
+
 
 ┌──────────────┐
 │ Gmail Monitor│ ← Polls every 30s
@@ -101,8 +103,12 @@ Queue-Based - 100-300 emails/day
        │ PostgreSQL   │ ← Track processed emails
 
                     
+```
+
 
 Event-Driven - 1000+ emails/day
+
+```
 
 ┌─────────────────────────────────────────────────────────────┐
 │                    PRODUCTION ARCHITECTURE                   │
@@ -146,6 +152,7 @@ Event-Driven - 1000+ emails/day
                     └──────────────────┘
 
 
+```
 
 
 

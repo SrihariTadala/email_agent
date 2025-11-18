@@ -156,80 +156,95 @@ Event-Driven - 1000+ emails/day
 
 
 
-**2. What happens if the LLM hallucinates data?**
+### **2. What happens if the LLM hallucinates data?**
 
-Multi-Layer Defense Strategy
--Layer 1: Ensemble methods (multiple models)
--Layer 2: Human-in-the-Loop Verification
--Layer 3: Structured Output Validation
--Layer 4: Confidence Scoring
-
-
-
-**3. How do you handle rate limits (Gmail API, LLM API)?**
+Multi-Layer Defense Strategy:
+- **Layer 1:** Ensemble methods (multiple models)
+- **Layer 2:** Human-in-the-Loop Verification
+- **Layer 3:** Structured Output Validation
+- **Layer 4:** Confidence Scoring
 
 
-Rate Limits:
-
-Gmail API limiter (100/day free, 2000/day Workspace)
-Groq API limiter (30/min, 14,400/day free)
-Redis-based token bucket algorithm
-Fallback provider strategies
-Monitoring & alerts
-
-**4. What's your strategy for improving extraction accuracy?**
-
-1. Make up zip codes that don't exist , and invent chatbot
 
 
-If customer hasn’t booked in 7,14 days: reaminder mails . Autoreply is the most aspect i believe system sends personalized offer.
+### **3. How do you handle rate limits (Gmail API, LLM API)?**
 
-2. Fine-tuning with human corrections
-Every time dispatcher corrects an extraction = training example After 200 corrections (1 month at 50 reviews/day) → fine-tune model
-
-
-3. Focus on High-Value Routes First (Risk-Based Prioritization)
-
-Add 5 real freight request examples to every prompt Include common scenarios: pallets, LTL, hazmat, cross-country routes
-Show correct city/state/zip combinations
+**Rate Limits:**
+- Gmail API limiter *(100/day free, 2000/day Workspace)*
+- Groq API limiter *(30/min, 14,400/day free)*
+- Redis-based token bucket algorithm
+- Fallback provider strategies
+- Monitoring & alerts
 
 
-Losing a $10K quote due to error is worse than a $500 one
+### **4. What's your strategy for improving extraction accuracy?**
 
-Route patterns matter: Identify your top 20 routes (LA-Chicago, NY-Miami, etc.) Create specialized prompts for high-volume lanes
-Build custom validation for major customer zip codes
+1. **Handle invalid or missing data**
+   - Detect impossible or non-existent ZIP codes
+   - Ask user for clarification via chatbot/email
+   - Send reminder emails if customer hasn’t booked in 7 or 14 days
 
+2. **Fine-tuning with human corrections**
+   - Every dispatcher correction becomes a training example  
+   - After ~200 corrections (≈1 month at 50 reviews/day) → fine-tune the model for your domain  
+   - This gradually eliminates recurring extraction errors
 
-4. Implement Confidence Thresholds by Quote Value (Smart Automation)
+3. **Focus on High-Value Routes First (Risk-Based Prioritization)**
+   - Losing a \$10K quote due to extraction error is far more expensive than a \$500 quote  
+   - Add **5 real freight request examples** to every LLM prompt  
+   - Include scenarios: pallets, LTL, hazmat, cross-country loads  
+   - Ensure correct **city/state/ZIP** combinations  
+   - Identify your **top 20 routes** (LA–Chicago, NY–Miami, etc.) and build specialized prompts  
+   - Add custom validation for major customer ZIP codes
 
-5. Build Ensemble System for Critical Lanes (Multi-Model Validation)
+4. **Implement Confidence Thresholds by Quote Value**
+   - Low confidence + high quote amount → send to human review  
+   - High confidence + low quote amount → auto-approve  
+   - Avoid automation on ambiguous high-risk freight
 
-6. Create Feedback Loop with Sales Team (Domain Expertise)
+5. **Build Ensemble System for Critical Lanes**
+   - Use multiple models (Groq Llama 3.1, OpenAI, Claude)  
+   - Compare outputs — disagreements are flagged for review  
+   - Useful for high-volume business lanes
 
-Sales provides industry-specific terminology ("reefer" = refrigerated, "LTL" = less-than-truckload)
+6. **Create Feedback Loop with Sales Team**
+   - Sales knows industry-specific terminology:  
+     - “reefer” = refrigerated  
+     - “LTL” = less-than-truckload  
+     - “container drayage”, “air freight”, etc.  
+   - Add their corrections into the fine-tuning dataset
 
-7.  Dynamic Pricing Engine
-Calculate the optimal quote price using:
-market demand, lane seasonality, fuel prices, supply/demand imbalance
-This increases margin by 8–18% add cheapest gas stations to the driver along the route so that the cost is opttimized.
+7. **Dynamic Pricing Engine (Optional Enhancement)**
+   - Calculate optimal quote using:  
+     - market demand  
+     - lane seasonality  
+     - fuel prices  
+     - supply/demand imbalance  
+   - Can increase margins by **8–18%**  
+   - Add cheapest fuel stops along the route to optimize cost
 
-8. Smart Margin Adjustment
-Automatically apply: minimum margin thresholds discount for exisiting custoemrs higher margins for “urgent” lower margins when capacity is high premium pricing for high-risk freight
+8. **Smart Margin Adjustment**
+   - Minimum margin thresholds  
+   - Discounts for repeat customers  
+   - Higher margin for urgent loads  
+   - Lower margin when capacity is high  
+   - Premium pricing for hazmat/high-risk freight
 
-High-Value Customer Dashboard
-top customers
-top drivers
-top dispatchers
+9. **High-Value Customer Dashboard**
+   - Top customers  
+   - Top drivers  
+   - Top dispatchers  
+   - Frequently booked lanes  
+   - Quote conversion rate  
 
-Driver Performance Insights
-Track:
-on-time %
-fuel efficiency
-driving style
-delays
-Reward high performers
+10. **Driver Performance Insights**
+    - Track on-time %  
+    - Fuel efficiency  
+    - Driving style  
+    - Delay patterns  
+    - Reward high performers  
 
-
+****
 ** 5. How would you add human review for high-value quotes?**
 
 
@@ -247,7 +262,7 @@ Health check endpoints
 Slack daily summaries
 
 
-
+****
 
 
 Test Cases- 

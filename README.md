@@ -179,17 +179,24 @@ Multi-Layer Defense Strategy:
 
 ### **4. What's your strategy for improving extraction accuracy?**
 
-1. **Handle invalid or missing data**
+
+0. **Integrate LangChain**
+   - Multi-step reasoning
+   - Multi-model orchestration
+   - Tool calling
+   - Real enterprise AI systems often need Better memory
+
+2. **Handle invalid or missing data**
    - Detect impossible or non-existent ZIP codes
    - Ask user for clarification via chatbot/email
    - Send reminder emails if customer hasn’t booked in 7 or 14 days
 
-2. **Fine-tuning with human corrections**
+3. **Fine-tuning with human corrections**
    - Every dispatcher correction becomes a training example  
    - After ~200 corrections (≈1 month at 50 reviews/day) → fine-tune the model for your domain  
    - This gradually eliminates recurring extraction errors
 
-3. **Focus on High-Value Routes First (Risk-Based Prioritization)**
+4. **Focus on High-Value Routes First (Risk-Based Prioritization)**
    - Losing a \$10K quote due to extraction error is far more expensive than a \$500 quote  
    - Add **5 real freight request examples** to every LLM prompt  
    - Include scenarios: pallets, LTL, hazmat, cross-country loads  
@@ -197,24 +204,24 @@ Multi-Layer Defense Strategy:
    - Identify your **top 20 routes** (LA–Chicago, NY–Miami, etc.) and build specialized prompts  
    - Add custom validation for major customer ZIP codes
 
-4. **Implement Confidence Thresholds by Quote Value**
+5. **Implement Confidence Thresholds by Quote Value**
    - Low confidence + high quote amount → send to human review  
    - High confidence + low quote amount → auto-approve  
    - Avoid automation on ambiguous high-risk freight
 
-5. **Build Ensemble System for Critical Lanes**
+6. **Build Ensemble System for Critical Lanes**
    - Use multiple models (Groq Llama 3.1, OpenAI, Claude)  
    - Compare outputs — disagreements are flagged for review  
    - Useful for high-volume business lanes
 
-6. **Create Feedback Loop with Sales Team**
+7. **Create Feedback Loop with Sales Team**
    - Sales knows industry-specific terminology:  
      - “reefer” = refrigerated  
      - “LTL” = less-than-truckload  
      - “container drayage”, “air freight”, etc.  
    - Add their corrections into the fine-tuning dataset
 
-7. **Dynamic Pricing Engine (Optional Enhancement)**
+8. **Dynamic Pricing Engine (Optional Enhancement)**
    - Calculate optimal quote using:  
      - market demand  
      - lane seasonality  
@@ -223,26 +230,27 @@ Multi-Layer Defense Strategy:
    - Can increase margins by **8–18%**  
    - Add cheapest fuel stops along the route to optimize cost
 
-8. **Smart Margin Adjustment**
+9. **Smart Margin Adjustment**
    - Minimum margin thresholds  
    - Discounts for repeat customers  
    - Higher margin for urgent loads  
    - Lower margin when capacity is high  
    - Premium pricing for hazmat/high-risk freight
 
-9. **High-Value Customer Dashboard**
+10. **High-Value Customer Dashboard**
    - Top customers  
    - Top drivers  
    - Top dispatchers  
    - Frequently booked lanes  
    - Quote conversion rate  
 
-10. **Driver Performance Insights**
+11. **Driver Performance Insights**
     - Track on-time %  
     - Fuel efficiency  
     - Driving style  
     - Delay patterns  
-    - Reward high performers  
+    - Reward high performers
+    
 
 **5. How would you add human review for high-value quotes?**
 

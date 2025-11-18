@@ -1,0 +1,33 @@
+# Environment variables
+.env
+.env.example
+
+credentials.json
+token.pickle
+venv/
+__pycache__/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Generated files
+quotes/
+*.pdf
+agent.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

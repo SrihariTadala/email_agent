@@ -1,0 +1,24 @@
+# Core dependencies
+fastapi==0.104.1
+uvicorn==0.24.0
+pydantic==2.5.0
+python-dotenv==1.0.0
+
+# Email handling - REMOVED IMAP/SMTP, now using Gmail API
+email-validator==2.1.0.post1
+
+# Gmail API with OAuth2
+google-auth==2.23.4
+google-auth-oauthlib==1.1.0
+google-auth-httplib2==0.1.1
+google-api-python-client==2.108.0
+
+# LLM - Using Groq (FREE!)
+groq==0.13.0  
+
+# PDF generation
+reportlab==4.0.7
+
+# Utilities
+requests==2.31.0
+python-dateutil==2.8.2

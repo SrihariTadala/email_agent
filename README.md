@@ -76,9 +76,9 @@
 
 Overview of entire system
 
-<span style="font-size:26px; font-weight:600;">
-1. How would you scale this to 1000 emails/day?
-</span>
+**1. How would you scale this to 1000 emails/day?**
+
+
 Queue-Based - 100-300 emails/day
 
 
@@ -149,9 +149,7 @@ Event-Driven - 1000+ emails/day
 
 
 
-<span style="font-size:26px; font-weight:600;">
-2. What happens if the LLM hallucinates data?
-</span>
+**2. What happens if the LLM hallucinates data?**
 
 Multi-Layer Defense Strategy
 Layer 1: Ensemble methods (multiple models)
@@ -161,9 +159,10 @@ Layer 4: Confidence Scoring
 
 
 <span style="font-size:26px; font-weight:600;">
-3. How do you handle rate limits (Gmail API, LLM API)?
-</span>
-How do you handle rate limits (Gmail API, LLM API)?
+
+
+**3. How do you handle rate limits (Gmail API, LLM API)?**
+
 
 Rate Limits:
 
@@ -173,11 +172,7 @@ Redis-based token bucket algorithm
 Fallback provider strategies
 Monitoring & alerts
 
-<span style="font-size:26px; font-weight:600;">
-4. What's your strategy for improving extraction accuracy?
-</span>
-
-
+**4. What's your strategy for improving extraction accuracy?**
 
 1. Make up zip codes that don't exist , and invent chatbot
 
@@ -239,10 +234,8 @@ delays
 Reward high performers
 
 
+** 5. How would you add human review for high-value quotes?**
 
-<span style="font-size:26px; font-weight:600;">
-5. How would you add human review for high-value quotes?
-</span>
 
 Human Review System:
 Priority-based review queue (urgent/high/normal) if amt is greater , slack 

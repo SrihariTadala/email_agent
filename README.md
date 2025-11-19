@@ -1,4 +1,4 @@
-# Freight Quote Agent - Complete Documentation 
+# Freight Quote Agent  
 **Built with:** Python, FastAPI, Gmail API, Groq (Llama 3.1), Mapbox, ReportLab
 
 

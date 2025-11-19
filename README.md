@@ -79,7 +79,7 @@ Overview of entire system
 **1. How would you scale this to 1000 emails/day?**
 
 
-Queue-Based - 100-300 emails/day
+Queue-Based - 100-300 emails/hour
 
 ```
 
@@ -106,7 +106,7 @@ Queue-Based - 100-300 emails/day
 ```
 
 
-Event-Driven - 1000+ emails/day
+Event-Driven - 1000+ emails/hour
 
 ```
 

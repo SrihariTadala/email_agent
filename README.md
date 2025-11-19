@@ -191,7 +191,8 @@ Multi-Layer Defense Strategy:
 
 3. **Fine-tuning with human corrections**
    - Every dispatcher correction becomes a training example  
-   - After ~200 corrections (≈1 month at 50 reviews/day) → fine-tune the model for your domain  
+   - After ~200 corrections (≈1 month at 50 reviews/day) → fine-tune the model for your domain
+   - FOB: Free on Board, NMFC: National Motor Freight Classification, BOL: Bill of Lading  
    - This gradually eliminates recurring extraction errors
 
 4. **Focus on High-Value Routes First (Risk-Based Prioritization)**
@@ -218,6 +219,8 @@ Multi-Layer Defense Strategy:
      - “LTL” = less-than-truckload  
      - “container drayage”, “air freight”, etc.  
    - Add their corrections into the fine-tuning dataset
+   - LAX to BOS
+   - RAG
 
 
 **5. How would you add human review for high-value quotes?**

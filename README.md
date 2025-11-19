@@ -161,8 +161,7 @@ Event-Driven - 1000+ emails/day
 Multi-Layer Defense Strategy:
 - **Layer 1:** Ensemble methods (multiple models) Also useful when one server fails like yesterday Cloudflare failed, one month ago AWS was down. But we need to have our server running without depedning so two models would be great
 - **Layer 2:** Human-in-the-Loop Verification
-- **Layer 3:** Structured Output Validation
-- **Layer 4:** Confidence Scoring
+- **Layer 3:** Confidence Scoring
 
 
 
@@ -179,17 +178,16 @@ Multi-Layer Defense Strategy:
 
 ### **4. What's your strategy for improving extraction accuracy?**
 
-
 0. **Integrate LangChain**
    - Multi-step reasoning
    - Multi-model orchestration
    - Tool calling
    - Real enterprise AI systems often need Better memory
 
-2. **Handle invalid or missing data**
+2. **Handle invalid**
    - Detect impossible or non-existent ZIP codes
    - Ask user for clarification via chatbot/email
-   - Send reminder emails if customer hasn’t booked in 7 or 14 days
+   - Send reminder emails if customer hasn’t booked in 7 or 14 days. Automatic Follow up would be a great feature. 
 
 3. **Fine-tuning with human corrections**
    - Every dispatcher correction becomes a training example  
@@ -221,36 +219,6 @@ Multi-Layer Defense Strategy:
      - “container drayage”, “air freight”, etc.  
    - Add their corrections into the fine-tuning dataset
 
-8. **Dynamic Pricing Engine (Optional Enhancement)**
-   - Calculate optimal quote using:  
-     - market demand  
-     - lane seasonality  
-     - fuel prices  
-     - supply/demand imbalance  
-   - Can increase margins by **8–18%**  
-   - Add cheapest fuel stops along the route to optimize cost
-
-9. **Smart Margin Adjustment**
-   - Minimum margin thresholds  
-   - Discounts for repeat customers  
-   - Higher margin for urgent loads  
-   - Lower margin when capacity is high  
-   - Premium pricing for hazmat/high-risk freight
-
-10. **High-Value Customer Dashboard**
-   - Top customers  
-   - Top drivers  
-   - Top dispatchers  
-   - Frequently booked lanes  
-   - Quote conversion rate  
-
-11. **Driver Performance Insights**
-    - Track on-time %  
-    - Fuel efficiency  
-    - Driving style  
-    - Delay patterns  
-    - Reward high performers
-    
 
 **5. How would you add human review for high-value quotes?**
 
@@ -278,9 +246,36 @@ Multi-Layer Defense Strategy:
  - Predictive Pickup Window Optimization (Weather, traffic, warehouse hours)
  - quote simulator(AI simulator to play aroud)
 
+**Dynamic Pricing Engine (Optional Enhancement)**
+   - Calculate optimal quote using:  
+     - market demand  
+     - lane seasonality  
+     - fuel prices  
+     - supply/demand imbalance  
+   - Can increase margins by **8–18%**  
+   - Add cheapest fuel stops along the route to optimize cost
+
+**Smart Margin Adjustment**
+   - Minimum margin thresholds  
+   - Discounts for repeat customers  
+   - Higher margin for urgent loads  
+   - Lower margin when capacity is high
+
+**High-Value Customer Dashboard**
+   - Top customers  
+   - Top drivers  
+   - Top dispatchers  
+   - Frequently booked lanes  
+   - Quote conversion rate  
+
+**Driver Performance Insights**
+    - Track on-time %  
+    - Delay patterns  
+    - Reward high performers
+    
+
+
 Test Cases- 
-
-
 
 ```python
 class QuoteRequest(BaseModel):

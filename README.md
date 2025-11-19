@@ -243,7 +243,7 @@ Multi-Layer Defense Strategy:
 
 **Future Improvements**
  - Voice-to-Quote System (Audio-Based Freight Requests)
- - Real-Time Quote Validation Using Live Carrier APIs (AOIS intergration)
+ - Real-Time Quote Validation Using Live Carrier APIs (API's intergration)
  - Multi-Document Ingestion
  - Competitor Price Matching (ML-Based Price Benchmarking
  - Predictive Pickup Window Optimization (Weather, traffic, warehouse hours)

@@ -159,7 +159,7 @@ Event-Driven - 1000+ emails/day
 ### **2. What happens if the LLM hallucinates data?**
 
 Multi-Layer Defense Strategy:
-- **Layer 1:** Ensemble methods (multiple models)
+- **Layer 1:** Ensemble methods (multiple models) Also useful when one server fails like yesterday Cloudflare failed, one month ago AWS was down. But we need to have our server running without depedning so two models would be great
 - **Layer 2:** Human-in-the-Loop Verification
 - **Layer 3:** Structured Output Validation
 - **Layer 4:** Confidence Scoring

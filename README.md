@@ -282,6 +282,7 @@ Test Cases-
 
 
 
+```python
 class QuoteRequest(BaseModel):
     origin_zip: str
     destination_zip: str
@@ -303,7 +304,11 @@ base example
   "destination_zip": "60601",
   "weight_lbs": 800,
   "pieces": 2,
-  "dimensions": { "length": 48, "width": 40, "height": 60 },
+  "dimensions": {
+    "length": 48,
+    "width": 40,
+    "height": 60
+  },
   "commodity": "electronics",
   "special_services": ["liftgate"],
   "equipment_type": "dry_van",
@@ -313,6 +318,7 @@ base example
 }
 
 
+
 Test Case A2 — Simple furniture shipment
 
 {
@@ -320,7 +326,11 @@ Test Case A2 — Simple furniture shipment
   "destination_zip": "77001",
   "weight_lbs": 1200,
   "pieces": 3,
-  "dimensions": { "length": 60, "width": 48, "height": 55 },
+  "dimensions": {
+    "length": 60,
+    "width": 48,
+    "height": 55
+  },
   "commodity": "furniture",
   "special_services": [],
   "equipment_type": "dry_van",
@@ -329,6 +339,7 @@ Test Case A2 — Simple furniture shipment
   "value_usd": 15000
 }
 
+
 Test Case B2 — Medical/Pharma with inside delivery
 
 {
@@ -336,7 +347,11 @@ Test Case B2 — Medical/Pharma with inside delivery
   "destination_zip": "30301",
   "weight_lbs": 500,
   "pieces": 1,
-  "dimensions": { "length": 48, "width": 36, "height": 40 },
+  "dimensions": {
+    "length": 48,
+    "width": 36,
+    "height": 40
+  },
   "commodity": "medical_equipment",
   "special_services": ["inside_delivery"],
   "equipment_type": "box_truck",
@@ -344,6 +359,7 @@ Test Case B2 — Medical/Pharma with inside delivery
   "hazmat": false,
   "value_usd": 120000
 }
+
 
 Test Case C1 — Oversized machinery
 
@@ -353,7 +369,11 @@ Test Case C1 — Oversized machinery
   "destination_zip": "90001",
   "weight_lbs": 4500,
   "pieces": 1,
-  "dimensions": { "length": 120, "width": 48, "height": 70 },
+  "dimensions": {
+    "length": 120,
+    "width": 48,
+    "height": 70
+  },
   "commodity": "industrial_machinery",
   "special_services": ["liftgate"],
   "equipment_type": "flatbed",
@@ -362,6 +382,7 @@ Test Case C1 — Oversized machinery
   "value_usd": 90000
 }
 
+
  4. Hazmat Scenarios
 
 {
@@ -369,7 +390,11 @@ Test Case C1 — Oversized machinery
   "destination_zip": "85001",
   "weight_lbs": 1500,
   "pieces": 2,
-  "dimensions": { "length": 48, "width": 40, "height": 55 },
+  "dimensions": {
+    "length": 48,
+    "width": 40,
+    "height": 55
+  },
   "commodity": "flammable_liquid_class_3",
   "special_services": [],
   "equipment_type": "dry_van",
